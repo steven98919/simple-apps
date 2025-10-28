@@ -1,7 +1,7 @@
 const express = require('express')
 const mysql = require('mysql');
 const app = express()
-const path = require('path')
+const path = require('node:path')
 require('dotenv').config();
 
 // Import Middleware
@@ -22,7 +22,7 @@ app.get('/app2', (req, res) => {
 
 app.get('/users', (req, res, next) => {
   const sql = "SELECT * FROM tb_data ORDER BY id desc"
-  connection.query(sql,(error, fields) => {
+  connection.query(sql, (error, fields) => {
     if (error) {
       console.log('error', error)
     } else {
