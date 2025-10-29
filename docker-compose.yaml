@@ -22,3 +22,6 @@ services:
     image: dpage/pgadmin4
     ports:
       - "80:80"
+    enviroment:
+    PGADMIN_DEFAULT_EMAIL: admin123@gmail.com
+    PGADMIN_DEFAULT_PASSWORD: admin123
