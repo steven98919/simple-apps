@@ -1,0 +1,17 @@
+name: simple-apps
+
+services:
+  web:
+    image: nginx
+    port:
+      - "8000:80"
+
+  web-httpd:
+    image: httpd
+    port:
+      - "8001:80"
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: admin123
