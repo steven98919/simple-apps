@@ -1,27 +1,13 @@
-name: simple-apps
+name: app
 
 services:
-  web:
-    image: nginx
+  app:
+    image: steven98919/simple-app
+    build: ./app
     ports:
-      - "8000:80"
+      - "5000:3000"
+    volumes:
+      - vol-simple:/app/public/images/
 
-  web-httpd:
-    image: httpd
-    ports:
-      - "8001:80"
-
-  db:
-    image: postgres
-    environment:
-      POSTGRES_PASSWORD: admin123
-    ports:
-      - "5432:5432"
-
-  pgadmin:
-    image: dpage/pgadmin4
-    ports:
-      - "80:80"
-    enviroment:
-      PGADMIN_DEFAULT_EMAIL: admin123@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: admin123
+volumes:
+  vol-simple:
