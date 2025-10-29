@@ -1,7 +1,7 @@
 name: simple-apps
 
 services:
-  web:doc
+  web:
     image: nginx
     ports:
       - "8000:80"
@@ -15,6 +15,10 @@ services:
     image: postgres
     environment:
       POSTGRES_PASSWORD: admin123
-
     ports:
       - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - "80:80"
