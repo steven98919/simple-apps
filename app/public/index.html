@@ -4,13 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Training DevOps</title>
+    <title>Your Name — Profile</title>
     <link rel="stylesheet" href="stylesheet/style.css" />
   </head>
   <body>
-    <img class="logo" src="./images/idn-logo.png" alt="idn-logo" />
-    <h1>Belajar Devops</h1>
-    <h1>Update version 1.1.1</h1>
-    <h1>Update version 2.1.1</h1>
+    <header class="site-header">
+      <div class="container header-inner">
+        <img class="avatar" src="./images/avatar.svg" alt="Your Name avatar" />
+        <div class="intro">
+          <h1>Your Name</h1>
+          <p class="tagline">
+            Software engineer • DevOps enthusiast • Open-source contributor
+          </p>
+          <div class="contact">
+            <a href="mailto:you@example.com" class="btn">you@example.com</a>
+            <a
+              href="https://github.com/your-username"
+              target="_blank"
+              rel="noopener"
+              class="btn outline"
+              >GitHub</a
+            >
+            <a
+              href="https://linkedin.com/in/your-username"
+              target="_blank"
+              rel="noopener"
+              class="btn outline"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container main">
+      <section class="about">
+        <h2>About</h2>
+        <p>
+          Hi — I'm Your Name. I build reliable, maintainable systems and enjoy
+          automating workflows. I work across backend services, CI/CD, and
+          developer experience. This little site is a quick profile you can
+          personalize.
+        </p>
+      </section>
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <ul class="skill-list">
+          <li>Node.js & Express</li>
+          <li>Docker & Kubernetes</li>
+          <li>CI/CD (Jenkins, GitHub Actions)</li>
+          <li>Postgres & SQL</li>
+        </ul>
+      </section>
+
+      <section class="projects">
+        <h2>Selected projects</h2>
+        <article class="project">
+          <h3>Simple Apps</h3>
+          <p>Example project repository used for training and demos.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Your Name — built with ❤️</p>
+      </div>
+    </footer>
+
+    <script>
+      // set copyright year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
